@@ -9,12 +9,15 @@ namespace UnitTestFactorial
 
         int Factorial(int n)
         {
+            int result = 1;
             if (n <= -1 || n >= 13)
             {
                 throw new ArgumentOutOfRangeException();
             }
+
+           
           
-            int result = 1;
+            
            /* for (int i= n ; i > 1; i--)
             {
                 //result *= i;
@@ -22,7 +25,7 @@ namespace UnitTestFactorial
                 
             }*/
 
-            while (n > 1)
+            while (n >= 1)
             {
                 result *= n;
                 n--;
@@ -51,6 +54,16 @@ namespace UnitTestFactorial
 
             Assert.AreEqual(1, Factorial(0));
         }
+
+
+        [TestMethod]
+        public void TestMethod1() // Input: 1, Output: 1
+        {
+
+            Assert.AreEqual(1, Factorial(1));
+        }
+
+
         [TestMethod]
         public void TestMethod5() // Input: 5, Output: 120
         {
