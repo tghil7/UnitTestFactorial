@@ -1,41 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 
-namespace UnitTestFactorial
+public class Class1
 {
-    [TestClass]
-    public class UnitTest1
-    {
-
-        int Factorial(int n)
-        {
-            int result = 1;
-            if (n <= -1 || n >= 13)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-
-           
-          
-            
-           /* for (int i= n ; i > 1; i--)
-            {
-                //result *= i;
-                
-                
-            }*/
-
-            while (n >= 1)
-            {
-                result *= n;
-                n--;
-            }
-
-            return result;
-            
-        }
-
-
+	public Class1()
+	{
 
         [TestMethod]
         public void TestMethod1()
@@ -111,7 +79,5 @@ namespace UnitTestFactorial
         {
             Factorial(int.MaxValue - 1);
         }
-
-
     }
 }
